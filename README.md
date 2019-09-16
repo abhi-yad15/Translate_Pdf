@@ -2,87 +2,71 @@
 This repository contains the code to translate any PDF document from one language to another.
 
 ## Getting Started
- At first you need to have "python3" installed on your system. Then you also need to have some python libraries installed on you system.
- 1. Selenium 
- 2. Docx 
+ At first you need to have "python3" installed on your system. Then you also need to have some python libraries.
+ 1. Selenium & chromedriver
+ 2. python-docx 
  3. googletrans
-
+ 
+ As we are using "googletrans" library so our ip will get blocked after few requests, so we need to use VPN, for Windows i have included "psiphon3" in the repository, you may use VPN of your choice. Remember to change the country for tranlating the second pdf.
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To install Selenium use 
 
 ```
-Give examples
+pip install selenium
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To install python-docx use 
 
 ```
-Give the example
+pip install python-docx
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+To install googletrans use 
 
 ```
-Give an example
+pip install googletrans
 ```
 
-### And coding style tests
+I have included a chromedriver.exe in the repository but you may need different version of chromedriver based on the version of you chrome browser. You can download the suitable version for you from [here](https://chromedriver.chromium.org/downloads).
 
-Explain what these tests test and why
+### Using
+
+To use the above code.
+1. Download the repository.
+2. Start the VPN.
+3. open Command Prompt(cmd) 
 
 ```
-Give an example
+python translate.py "Name of the pdf" "Language to Change{Abbreviation (See below)}"
 ```
 
-## Deployment
+For Example
 
-Add additional notes about how to deploy this on a live system
+```
+python translate_pdf.py Maths.pdf hi
+```
+
+## Abbreviation For Few Language
+
+1. Hindi- hi
+2. English -en
+3. Nepali -ne
+4. Punjabi -pa
+5. Urdu -ur
+
+For other languages's abbreviation check [here](https://cloud.google.com/translate/docs/languages).
+### Steps involved
+
+After doing the above steps, you will a browser pop up, which will basically open chromedriver to convert pdf to docx. Then after that you will your pdf is being tranlated (check cmd). After few minutes the pdf will get translated. 
+
+### Error
+
+1. In case you see some errors like "Error code(0) or char (0)" that means Google have blocked your IP, try changing the your country (location) in your VPN and try again.
+2. In case of some HTTPS error try doing the same.
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [Python3](https://www.python.org/) - Python3
+* [Selenium](https://www.seleniumhq.org/) -Selenium
+* [Googletrans](https://pypi.org/project/googletrans/) - Googletrans
+* [python-docx](https://pypi.org/project/python-docx/)- python-docx
