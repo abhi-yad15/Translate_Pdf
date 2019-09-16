@@ -37,7 +37,7 @@ To use the above code.
 4. Open Command Prompt(cmd) and type 
 
 ```
-python translate.py "Name of the pdf" "Language to Change{Abbreviation (See below)}"
+python translate.py "Name of the pdf" "Language to Translate to{Abbreviation (See below)}"
 ```
 
 For Example
